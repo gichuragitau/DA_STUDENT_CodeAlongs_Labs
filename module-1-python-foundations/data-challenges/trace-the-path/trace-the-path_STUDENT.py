@@ -84,20 +84,16 @@ SUBMIT
 # If the two differ, say which line you mis-read. Do not edit the
 # prediction.
 
-with open("data/volunteer_shifts.txt") as f:
+with open("volunteer_shifts.txt") as f:
     shifts = [line for line in f.read().splitlines()
               if line and not line.startswith("#")]
 
 long_shifts = 0
 for shift in shifts:
     hours = int(shift.split(",")[2])
-    # TODO: write the test for a long shift. The coordinator counts a
-    #       shift of 4 hours or more.
-    if None:
-        # TODO: this is the counting line. Move long_shifts on by one.
-        long_shifts = None
-
-print("shifts of 4+ hours:", long_shifts)
+    if hours >= 4:
+     long_shifts +=  1
+     print("shifts of 4+ hours:", long_shifts)
 
 # Your answer:
 #
@@ -124,15 +120,11 @@ print("shifts of 4+ hours:", long_shifts)
 total = 0
 for shift in shifts:
     volunteer, day, hours = shift.split(",")
-    # TODO: add this shift's hours onto the running total. Mind the
-    #       type: everything that came out of that split is a string.
-    total = None
-    # TODO: print one line per pass: the day, the volunteer, and the
-    #       total so far. This printed line IS the tracing tool.
-    print(day, volunteer, "| running total:", None)
+    total += int(hours)
+    print(day, volunteer, "running total:", total)
 
-print("total hours logged this week:", total)
-
+print("total hours logged this week", total)
+    
 # ----- Share Out: Day 1 -----
 # Last 15 minutes, back together as a class. Bring:
 #
