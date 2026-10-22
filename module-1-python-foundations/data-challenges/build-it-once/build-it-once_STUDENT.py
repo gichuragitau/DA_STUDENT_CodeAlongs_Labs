@@ -44,17 +44,29 @@ SUBMIT
 
 # 1. What does one row represent?
 # Your answer:
+<<<<<<< HEAD
 #One row represents each Member's Name, Class they took and how many times that member took that class.
+=======
+#
+>>>>>>> upstream/main
 #
 
 # 2. Which fields hold numbers, and which hold text?
 # Your answer:
+<<<<<<< HEAD
 # Lines 1 and 2 hold strings only while lines 3 to 15 hold both strings and integers.
+=======
+#
+>>>>>>> upstream/main
 #
 
 # 3. What already looks wrong, missing or inconsistent?
 # Your answer:
+<<<<<<< HEAD
 # There are duplicates within the file. Not sure that the classes are all being taken by the same person; we can ony assume.
+=======
+#
+>>>>>>> upstream/main
 #
 
 ############################################################################
@@ -69,6 +81,7 @@ SUBMIT
 #    class: add the third field down all 13 records. Total sessions for Swim
 #    only: add that same field, but only on the records whose class is Swim.
 #    Write both in a comment before you run anything.
+<<<<<<< HEAD
 
 #Total Sessions across every class: 45 Sessions
 #Total sessions for swim only: 15 Swim Sessions
@@ -86,6 +99,14 @@ swim_only = 15
 # 4. Run it, and check both printed numbers against your two predictions.
 
 
+=======
+# 2. Write total_sessions(records) so it adds up the sessions column across
+#    every record in records and hands the total back with return, not
+#    print.
+# 3. Build swim_only: the records whose class is Swim, and nothing else.
+# 4. Run it, and check both printed numbers against your two predictions.
+#
+>>>>>>> upstream/main
 # The arithmetic is the same arithmetic a plain loop would do. What changes
 # is that the answer comes back to you instead of going to the screen.
 
@@ -95,9 +116,14 @@ with open("data/rec_center_signups.txt") as f:
 
 def total_sessions(records):
     # TODO: add up the sessions column across every record in `records`
+<<<<<<< HEAD
     # 45 sessions 
     # TODO: hand the total back to whoever called this. Do not print it.
     pass 
+=======
+    # TODO: hand the total back to whoever called this. Do not print it.
+    pass
+>>>>>>> upstream/main
 
 swim_only = []
 # TODO: fill swim_only with just the Swim records
