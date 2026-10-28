@@ -44,29 +44,17 @@ SUBMIT
 
 # 1. What does one row represent?
 # Your answer:
-<<<<<<< HEAD
 #One row represents each Member's Name, Class they took and how many times that member took that class.
-=======
-#
->>>>>>> upstream/main
 #
 
 # 2. Which fields hold numbers, and which hold text?
 # Your answer:
-<<<<<<< HEAD
 # Lines 1 and 2 hold strings only while lines 3 to 15 hold both strings and integers.
-=======
-#
->>>>>>> upstream/main
 #
 
 # 3. What already looks wrong, missing or inconsistent?
 # Your answer:
-<<<<<<< HEAD
 # There are duplicates within the file. Not sure that the classes are all being taken by the same person; we can ony assume.
-=======
-#
->>>>>>> upstream/main
 #
 
 ############################################################################
