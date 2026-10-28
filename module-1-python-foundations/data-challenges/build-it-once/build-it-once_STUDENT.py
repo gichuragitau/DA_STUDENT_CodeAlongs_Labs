@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# adding a note for testing
 """Data Challenge: Build It Once, Use It Again
 GitBook Quest 1.2: Build It Once, Use It Again
 
@@ -69,7 +70,6 @@ SUBMIT
 #    class: add the third field down all 13 records. Total sessions for Swim
 #    only: add that same field, but only on the records whose class is Swim.
 #    Write both in a comment before you run anything.
-<<<<<<< HEAD
 
 #Total Sessions across every class: 45 Sessions
 #Total sessions for swim only: 15 Swim Sessions
@@ -87,14 +87,6 @@ swim_only = 15
 # 4. Run it, and check both printed numbers against your two predictions.
 
 
-=======
-# 2. Write total_sessions(records) so it adds up the sessions column across
-#    every record in records and hands the total back with return, not
-#    print.
-# 3. Build swim_only: the records whose class is Swim, and nothing else.
-# 4. Run it, and check both printed numbers against your two predictions.
-#
->>>>>>> upstream/main
 # The arithmetic is the same arithmetic a plain loop would do. What changes
 # is that the answer comes back to you instead of going to the screen.
 
@@ -104,14 +96,9 @@ with open("data/rec_center_signups.txt") as f:
 
 def total_sessions(records):
     # TODO: add up the sessions column across every record in `records`
-<<<<<<< HEAD
     # 45 sessions 
     # TODO: hand the total back to whoever called this. Do not print it.
     pass 
-=======
-    # TODO: hand the total back to whoever called this. Do not print it.
-    pass
->>>>>>> upstream/main
 
 swim_only = []
 # TODO: fill swim_only with just the Swim records
