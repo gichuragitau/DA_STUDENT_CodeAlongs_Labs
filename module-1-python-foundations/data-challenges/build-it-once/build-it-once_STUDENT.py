@@ -77,7 +77,7 @@ SUBMIT
 # 2. Write total_sessions(records) so it adds up the sessions column across
 #    every record in records and hands the total back with return, not
 #    print.
-def total_sessions(records):
+def total_sessions(records): 
     return records 
 
 # 3. Build swim_only: the records whose class is Swim, and nothing else.
@@ -90,19 +90,32 @@ swim_only = 15
 # The arithmetic is the same arithmetic a plain loop would do. What changes
 # is that the answer comes back to you instead of going to the screen.
 
-with open("data/rec_center_signups.txt") as f:
+with open("/Users/gichuragitau/Desktop/DA_STUDENT_CodeAlongs_Labs archive/module-1-python-foundations/data-challenges/build-it-once/rec_center_signups.txt") as f:
     signups = [line for line in f.read().splitlines()
                if line and not line.startswith("#")]
 
 def total_sessions(records):
+    total = 0
+    for row in records:
+        member, class_name, session = row.split(',')
+        total += int(session)
+      
+
     # TODO: add up the sessions column across every record in `records`
     # 45 sessions 
     # TODO: hand the total back to whoever called this. Do not print it.
-    pass 
+    return total 
 
 swim_only = []
+#empty list brackets with no value in between 
 # TODO: fill swim_only with just the Swim records
+for row in signups:
+    member, class_name, session = row.split(',')
+    if class_name == "Swim":
+        swim_only.append(row)
 
+        
+swim_only = []
 print("every class:", total_sessions(signups))
 print("swim only:  ", total_sessions(swim_only))
 
