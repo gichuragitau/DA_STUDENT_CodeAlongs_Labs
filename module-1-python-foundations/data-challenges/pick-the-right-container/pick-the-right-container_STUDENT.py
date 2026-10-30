@@ -122,7 +122,23 @@ print("busiest card:", card_ids[busiest], "with", max(tap_counts), "taps")
 
 taps_by_card = {}
 lookups = 0 
-for 
+for row in taps:
+    lookups += 1
+    if row[1] in taps_by_card:
+        taps_by_card[row[1]] += 1
+    else:
+        taps_by_card[row[1]] = 1
+
+stations = set()
+for row in taps:
+    stations.add(row[2])
+
+repeat_riders=0
+if tap_counts in taps_by_card:
+    if tap_counts >1:
+        repeat_riders += 1
+
+
 print("distinct cards:", len(taps_by_card))
 print("lookups the dictionary needed:", lookups)
 print("unique stations:", len(stations), sorted(stations))
