@@ -16,11 +16,19 @@ taps = rows[1:]
 
 # Step 1: Write `scan_for()` and Count Its Comparisons for Three Tap IDs
 def scan_for(tap_id, records):
+    comparisons = 0
+    for row in records:
+        comparisons += 1
+        if row [0] == tap_id:
+            return comparisons 
+    return comparisons
+
+
     # TODO: assign `comparisons` to 0
     # TODO: loop over `records`; add 1 to `comparisons` for every row
     # TODO: inside the loop, return `comparisons` when row[0] == tap_id
     # TODO: after the loop, return `comparisons`
-    pass
+pass
 
 
 print("columns:", header)
@@ -38,7 +46,20 @@ print("comparisons to find T999:", scan_for("T999", taps))
 # Step 2: Print Scan Cost at 5 to 40 Rows, Then Count a Nested Pair Loop
 for size in [5, 10, 20, 40]:
     worst = scan_for("T999", taps[:size])
-    # TODO: print "rows:", `size`, "| worst-case comparisons:", `worst`
+    print ("rows:",size,"| worst-case comparisons:",worst)
+# TODO: print "rows:", `size`, "| worst-case comparisons:", `worst`
+pairs = 0
+# TODO: assign `pairs` to 0; loop over `taps` with a loop over `taps` inside
+for tap in taps:
+    for other_taps in taps:
+        pairs += 1
+print(len(taps), pairs)
+big = len(taps) * 10
+
+print(f'worst case: {big}, pair loop count on big rows: {big**2}')
+ 
+
+
 # TODO: assign `pairs` to 0; loop over `taps` with a loop over `taps` inside
 # TODO: add 1 to `pairs` in the inner loop
 # TODO: print len(taps) and `pairs`
@@ -62,6 +83,22 @@ for size in [5, 10, 20, 40]:
 # TODO: if card_ids[i] == card, add 1 to tap_counts[i], set found, break
 # TODO: after the inner loop, if not found, append `card` and 1 to the lists
 
+card_ids = []
+tap_counts = []
+comparisons = 0
+for row in taps:
+    card = row[1]
+    found = False
+    for i in range(len(card_ids)):
+        comparisons += 1
+        if card_ids[1] == card:
+            tap_counts[i] += 1
+            found = True
+            break
+    if found == False:
+        card_ids.append(card)
+        tap_counts.append(1)
+    
 busiest = tap_counts.index(max(tap_counts))
 print("distinct cards:", len(card_ids))
 print("comparisons the two parallel lists needed:", comparisons)
@@ -82,6 +119,10 @@ print("busiest card:", card_ids[busiest], "with", max(tap_counts), "taps")
 # TODO: assign `repeat_riders` to 0
 # TODO: loop over `taps_by_card`; add 1 to `repeat_riders` if a count is > 1
 
+
+taps_by_card = {}
+lookups = 0 
+for 
 print("distinct cards:", len(taps_by_card))
 print("lookups the dictionary needed:", lookups)
 print("unique stations:", len(stations), sorted(stations))
