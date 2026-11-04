@@ -91,7 +91,7 @@ for row in taps:
     found = False
     for i in range(len(card_ids)):
         comparisons += 1
-        if card_ids[1] == card:
+        if card_ids[i] == card:
             tap_counts[i] += 1
             found = True
             break
