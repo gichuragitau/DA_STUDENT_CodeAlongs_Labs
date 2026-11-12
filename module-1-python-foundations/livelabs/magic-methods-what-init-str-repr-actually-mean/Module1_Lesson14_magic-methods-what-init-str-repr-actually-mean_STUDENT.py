@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 """Magic Methods — What __init__/__str__/__repr__ Actually Mean
 Module 1: Python Foundations
 
@@ -33,7 +33,7 @@ class BoardGame:
         self.title = title
         self.players_available = players_available
         self.category = category
-
+    def __str__(self)
 connect4 = BoardGame("Connect Four", 4, "Strategy")
 print(connect4)
 
