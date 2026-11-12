@@ -33,7 +33,7 @@ SUBMIT
 # lecture, and not one of the project's own 4 scenarios.
 
 # Your answer:
-#Stakeholder may need dates withdrew and dates deposited, whether it is on the shelf or not.
+#Stakeholder needs dates withdrew and dates deposited, and whether it is on the shelf or not.
 #
 
 # ===== Step 2: Decide Your Attributes, Each With a Reason From the Scenario =====
