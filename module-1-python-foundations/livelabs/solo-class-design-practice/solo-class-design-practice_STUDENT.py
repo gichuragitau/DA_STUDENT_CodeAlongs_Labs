@@ -33,14 +33,15 @@ SUBMIT
 # lecture, and not one of the project's own 4 scenarios.
 
 # Your answer:
-#
+#Stakeholder may need dates withdrew and dates deposited, whether it is on the shelf or not.
 #
 
 # ===== Step 2: Decide Your Attributes, Each With a Reason From the Scenario =====
 
 # Your answer:
+#Tool Type - an i
 #
-#
+
 
 # ===== Step 3: Write __init__ and a Method, From Scratch =====
 # There is no single correct design here. Your class name, your attribute
