@@ -41,6 +41,7 @@ supplies = [(SupplyItem("Paint", 3, "Arts&Crafts")),
             (SupplyItem("Hammer", 7, "Hardware")),
             (SupplyItem("Easel", 4, "Arts&Crafts"))]
 
+print(supplies)
 
 # ===== 2. Search 1: Linear Scan =====
 # Write a function that checks each item one at a time until it finds the one
@@ -49,6 +50,24 @@ print('----- 2. Search 1: Linear Scan -----')
 # TODO: define find_by_name_linear(supplies, name) that loops over
 # supplies and returns the item whose .name matches, or None if
 # nothing matches
+class SupplyItem:
+    def __init__ (self,name, count, department):
+     self.name 
+     self.count
+     self.department
+
+supplies = [(SupplyItem("Paint", 3, "Arts&Crafts")),
+            (SupplyItem("Screwdriver", 6,"Hardware")),
+            (SupplyItem("Hammer", 7, "Hardware")),
+            (SupplyItem("Easel", 4, "Arts&Crafts"))]
+
+def find_by_name_linerar(supplies, name):
+ for item in supplies:
+   if item.name == name:
+    return name
+ return None
+
+found = find_by_name_linerar(supplies, "Tape")
 
 
 # TODO: call it looking for "Tape", then print the result's name
