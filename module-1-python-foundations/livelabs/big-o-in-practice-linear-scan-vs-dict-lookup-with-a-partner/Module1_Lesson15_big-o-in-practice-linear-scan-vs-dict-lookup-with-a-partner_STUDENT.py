@@ -27,10 +27,19 @@ fill it in before you run the file again.
 print('----- 1. Setup: A Class and Its Objects -----')
 # TODO: define SupplyItem with __init__ storing name, count,
 # department
+class SupplyItem:
+    def __init__ (self,name, count, department):
+     self.name 
+     self.count
+     self.department
 
 
 # TODO: create a list called supplies with 4 SupplyItem objects
 # of your own choosing
+supplies = [(SupplyItem("Paint", 3, "Arts&Crafts")),
+            (SupplyItem("Screwdriver", 6,"Hardware")),
+            (SupplyItem("Hammer", 7, "Hardware")),
+            (SupplyItem("Easel", 4, "Arts&Crafts"))]
 
 
 # ===== 2. Search 1: Linear Scan =====
