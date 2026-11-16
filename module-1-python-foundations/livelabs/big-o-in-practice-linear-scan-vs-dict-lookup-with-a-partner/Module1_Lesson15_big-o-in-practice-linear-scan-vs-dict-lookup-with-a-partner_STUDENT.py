@@ -59,7 +59,8 @@ class SupplyItem:
 supplies = [(SupplyItem("Paint", 3, "Arts&Crafts")),
             (SupplyItem("Screwdriver", 6,"Hardware")),
             (SupplyItem("Hammer", 7, "Hardware")),
-            (SupplyItem("Easel", 4, "Arts&Crafts"))]
+            (SupplyItem("Easel", 4, "Arts&Crafts"))
+            (SupplyItem("Tape", 9, "Arts&Crafts"))]
 
 def find_by_name_linerar(supplies, name):
  for item in supplies:
