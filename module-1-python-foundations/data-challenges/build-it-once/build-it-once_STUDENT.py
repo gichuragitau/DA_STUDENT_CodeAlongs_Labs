@@ -114,8 +114,6 @@ for row in signups:
     if class_name == "Swim":
         swim_only.append(row)
 
-        
-swim_only = []
 print("every class:", total_sessions(signups))
 print("swim only:  ", total_sessions(swim_only))
 
