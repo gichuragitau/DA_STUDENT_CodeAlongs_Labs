@@ -139,12 +139,18 @@ print("swim only:  ", total_sessions(swim_only))
 
 def count_long_bookings(records, minimum):
     # TODO: count the records whose sessions number is `minimum` or more
+    count = 0
+    for row in records:
+        member, class_name, session = row.split(',')
+        if int(session) >= minimum:
+            count += 1
     # TODO: return the count
-    pass
+    return count
 
 def show_long_bookings(records, minimum):
     # TODO: print a sentence with the same count in it. Only print.
-    pass
+    count = count_long_bookings(records, minimum)
+    print("long bookings:",count)
 
 print("returned:", count_long_bookings(signups, 4))
 print("returned:", count_long_bookings(signups, 2))
@@ -153,7 +159,7 @@ handed_back = show_long_bookings(signups, 4)
 print("what show_long_bookings handed back:", handed_back)
 
 # Your answer:
-#
+# handed_back returns none cause show_bookings prints a result but does not return anything
 #
 
 # ----- Share Out: Day 1 -----
